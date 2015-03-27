@@ -75,22 +75,17 @@ module.exports = function(opts, callback) {
   function useExtension() {
     var customErr;
     
-    console.log('captured use extension call');
-
     screenshare.available(function(err, version) {
       if (err) {
         screenshare.on('activate', useExtension);
         return install(opts);
       }
       
-      console.log('making screenshare request');
       screenshare.request(function(err, c) {
-        console.log('back', arguments);
         if (err) {
           return callback(err);
         }
         
-        console.log(c);
         getUserMedia(c, callback);
       });
     });
