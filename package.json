@@ -1,7 +1,7 @@
 {
   "name": "rtc-screen",
   "version": "1.0.0",
-  "description": "Screenshare (full-screen) please - stat! Will make use of both command-line permissioned APIs and extensions to provide screensharing",
+  "description": "Screenshare please - stat! Will make use of both command-line permissioned APIs and extensions to provide screensharing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
