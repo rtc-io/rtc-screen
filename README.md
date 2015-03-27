@@ -5,7 +5,7 @@ Please can I just have a media stream of the screen please?
 
 [![NPM](https://nodei.co/npm/rtc-screen.png)](https://nodei.co/npm/rtc-screen/)
 
-[![bitHound Score](https://www.bithound.io/github/rtc-io/rtc-desktop/badges/score.svg)](https://www.bithound.io/github/rtc-io/rtc-desktop) 
+[![bitHound Score](https://www.bithound.io/github/rtc-io/rtc-screen/badges/score.svg)](https://www.bithound.io/github/rtc-io/rtc-screen) 
 
 ## Example Usage
 
