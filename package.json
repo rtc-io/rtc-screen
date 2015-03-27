@@ -1,7 +1,7 @@
 {
-  "name": "rtc-desktop",
+  "name": "rtc-screen",
   "version": "1.0.0",
-  "description": "Desktop stream please - stat!",
+  "description": "Screenshare (full-screen) please - stat! Will make use of both command-line permissioned APIs and extensions to provide screensharing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/rtc-io/rtc-desktop/issues"
   },
-  "homepage": "https://github.com/rtc-io/rtc-desktop"
+  "homepage": "https://github.com/rtc-io/rtc-desktop",
+  "dependencies": {
+    "crel": "^2.1.8",
+    "getusermedia": "^1.2.0",
+    "rtc-screenshare": "^3.1.1"
+  },
+  "devDependencies": {
+    "attachmediastream": "^1.1.0",
+    "hyperscript": "^1.4.6"
+  }
 }
