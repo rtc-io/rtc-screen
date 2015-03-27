@@ -1,6 +1,6 @@
 {
   "name": "rtc-screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Screenshare please - stat! Will make use of both command-line permissioned APIs and extensions to provide screensharing",
   "main": "index.js",
   "scripts": {
