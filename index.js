@@ -1,4 +1,5 @@
 var crel = require('crel');
+var defaults = require('cog/defaults');
 var getUserMedia = require('getusermedia');
 var constraints = require('./constraints');
 var install = require('./install');
@@ -11,7 +12,7 @@ var install = require('./install');
   ## Example Usage
   
   <<< examples/simple.js
-
+  
 **/
 module.exports = function(opts, callback) {
   var screenshare;
@@ -46,7 +47,9 @@ module.exports = function(opts, callback) {
   }
   
   // interface with screensharing extensions
-  screenshare = require('rtc-screenshare')(opts);
+  screenshare = require('rtc-screenshare')(defaults(opts, {
+    chromeExtension: 'rtc.io screenshare'
+  }));
   
   // attempt extension free capture
   getUserMedia(constraints(null, opts), function(err, stream) {
