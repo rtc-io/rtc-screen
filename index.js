@@ -29,6 +29,10 @@ var install = require('./install');
   
   <<< examples/custom-extension.js
   
+  ## Tweaking Width, Height, Frame Rate, etc
+  
+  <<< examples/custom-constraints.js
+  
   ## Inline Installation
   
   While the [`rtc-screenshare`](https://github.com/rtc-io/rtc-screenshare)
