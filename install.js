@@ -2,7 +2,8 @@ var crel = require('crel');
 
 module.exports = function(opts) {
   var link = document.querySelector('link[rel="chrome-webstore-item"]');
-  var firstChild = document.body.childNodes[0];
+  var container = (opts || {}).installerContainer || document.body;
+  var firstChild = container.childNodes[0];
   
   function createInstallBar() {
     var anchor;
@@ -34,9 +35,9 @@ module.exports = function(opts) {
   }
   
   if (firstChild) {
-    document.body.insertBefore(createInstallBar(), firstChild);
+    container.insertBefore(createInstallBar(), firstChild);
   }
   else {
-    document.body.appendChild(createInstallBar());
+    container.appendChild(createInstallBar());
   }
 };
