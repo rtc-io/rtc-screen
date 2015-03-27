@@ -1,20 +1,23 @@
-module.exports = function(sourceId, opts) {
-  var mandatory = {
-    chromeMediaSource: sourceId ? 'desktop' : 'screen',
-    maxWidth: (opts || {}).maxWidth || screen.width,
-    maxHeight: (opts || {}).maxHeight || screen.height,
-    minFrameRate: (opts || {}).minFrameRate || 1,
-    maxFrameRate: (opts || {}).maxFrameRate || 5
+var extend = require('cog/extend-existing');
+
+module.exports = function(opts, baseConstraints) {
+  var mandatoryDefaults = {
+    chromeMediaSource: 'screen',
+    maxWidth: screen.width,
+    maxHeight: screen.height,
+    minFrameRate: 1,
+    maxFrameRate: 5
   };
   
-  if (sourceId) {
-    mandatory.chromeMediaSourceId = sourceId;
+  if (baseConstraints) {
+    extend(baseConstraints.video.mandatory, opts);
+    return baseConstraints;
   }
   
   return {
     audio: false,
     video: {
-      mandatory: mandatory,
+      mandatory: extend(mandatoryDefaults, opts),
       optional: []
     }
   };

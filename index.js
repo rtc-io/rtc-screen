@@ -86,7 +86,7 @@ module.exports = function(opts, callback) {
           return callback(err);
         }
         
-        getUserMedia(c, callback);
+        getUserMedia(constraints(opts, c), callback);
       });
     });
   }
@@ -102,7 +102,7 @@ module.exports = function(opts, callback) {
   }));
   
   // attempt extension free capture
-  getUserMedia(constraints(null, opts), function(err, stream) {
+  getUserMedia(constraints(opts), function(err, stream) {
     if (err) {
       return useExtension();
     }
